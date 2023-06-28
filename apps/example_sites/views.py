@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from apps.example_sites.models import PythonWebBasicsModel, JSFrontEndModel
+from apps.example_sites.models import PythonWebBasicsModel, JSFrontEndModel, JSAdvancedModel, HTMLCSS
 from apps.functionality.items import get_all_items
 
 
@@ -10,7 +10,9 @@ from apps.functionality.items import get_all_items
 def example_sites(request):
     return render(request, 'example_sites/web-examples.html', context={
         'web_items': get_all_items(PythonWebBasicsModel),
-        'js_front_end': get_all_items(JSFrontEndModel)
+        'js_front_end': get_all_items(JSFrontEndModel),
+        'js_advanced': get_all_items(JSAdvancedModel),
+        'html_css': get_all_items(HTMLCSS),
     })
 
 
@@ -28,3 +30,35 @@ def scary_story(request):
 
 def music_site(request):
     return render(request, 'example_sites/music_site.html')
+
+
+def hotel_reservation(request):
+    return render(request, 'example_sites/hotel-reservation.html')
+
+
+def ski_lift(request):
+    return render(request, 'example_sites/ski-lift.html')
+
+
+def travel_agency(request):
+    return render(request, 'example_sites/travel_agency.html')
+
+
+def service(request):
+    return render(request, 'example_sites/service.html')
+
+
+def payment_plan(request):
+    return render(request, 'example_sites/payment-plan.html')
+
+
+def photography_portfolio(request):
+    return render(request, 'example_sites/photography_portfolio.html')
+
+
+def animal_help(request):
+    return render(request, 'example_sites/animal_help.html')
+
+
+def fees(request):
+    return render(request, 'example_sites/fees.html')
