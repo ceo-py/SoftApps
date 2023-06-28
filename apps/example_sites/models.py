@@ -1,76 +1,55 @@
 from django.db import models
 
-
 # Create your models here.
 
-
-class PythonWebBasicsModel(models.Model):
-    title = models.CharField(
-
-    )
-
-    image_url = models.URLField(
-
-    )
-
-    site_url = models.URLField(
-
-    )
-
-    code_link = models.URLField(
-
-    )
+from django.db import models
 
 
-class JSFrontEndModel(models.Model):
-    title = models.CharField(
+class BaseModel(models.Model):
+    title = models.CharField(max_length=100)
+    image_url = models.URLField()
+    site_url = models.URLField()
+    code_link = models.URLField()
 
-    )
-
-    image_url = models.URLField(
-
-    )
-
-    site_url = models.URLField(
-
-    )
-
-    code_link = models.URLField(
-
-    )
+    class Meta:
+        abstract = True
 
 
-class JSAdvancedModel(models.Model):
-    title = models.CharField(
-
-    )
-
-    image_url = models.URLField(
-
-    )
-
-    site_url = models.URLField(
-
-    )
-
-    code_link = models.URLField(
-
-    )
+class PythonWebBasicsModel(BaseModel):
+    pass
 
 
-class HTMLCSS(models.Model):
-    title = models.CharField(
+class JSFrontEndModel(BaseModel):
+    pass
 
-    )
 
-    image_url = models.URLField(
+class JSAdvancedModel(BaseModel):
+    pass
 
-    )
 
-    site_url = models.URLField(
+class HTMLCSSModel(BaseModel):
+    pass
 
-    )
 
-    code_link = models.URLField(
+class GamesProjectsModel(BaseModel):
+    pass
 
-    )
+
+class DiscordBotsModel(BaseModel):
+    pass
+
+
+class OtherProjectsModel(BaseModel):
+    pass
+
+
+class SuggestionsModel(BaseModel):
+    pass
+
+
+class BooksModel(BaseModel):
+    pass
+
+
+class WebSitesModel(BaseModel):
+    pass

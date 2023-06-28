@@ -1,12 +1,19 @@
 from django.contrib import admin
 
-from apps.example_sites.models import PythonWebBasicsModel, JSFrontEndModel, JSAdvancedModel, HTMLCSS
+from apps.example_sites.models import *
 
 # Register your models here.
 
+admin.site.register((
+    PythonWebBasicsModel,
+    JSFrontEndModel,
+    JSAdvancedModel,
+    HTMLCSSModel,
+    GamesProjectsModel,
+    DiscordBotsModel,
+    OtherProjectsModel,
+    SuggestionsModel,
+    BooksModel,
+    WebSitesModel
 
-admin.site.register(PythonWebBasicsModel)
-admin.site.register(JSFrontEndModel)
-admin.site.register(JSAdvancedModel)
-admin.site.register(HTMLCSS)
-
+))

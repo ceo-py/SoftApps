@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from apps.example_sites.models import PythonWebBasicsModel, JSFrontEndModel, JSAdvancedModel, HTMLCSS
+from apps.example_sites.models import *
 from apps.functionality.items import get_all_items
 
 
@@ -12,7 +12,13 @@ def example_sites(request):
         'web_items': get_all_items(PythonWebBasicsModel),
         'js_front_end': get_all_items(JSFrontEndModel),
         'js_advanced': get_all_items(JSAdvancedModel),
-        'html_css': get_all_items(HTMLCSS),
+        'html_css': get_all_items(HTMLCSSModel),
+        'games': get_all_items(GamesProjectsModel),
+        'discord_bots': get_all_items(DiscordBotsModel),
+        'other_projects': get_all_items(OtherProjectsModel),
+        'suggestions': get_all_items(SuggestionsModel),
+        'books': get_all_items(BooksModel),
+        'web_sites': get_all_items(WebSitesModel),
     })
 
 

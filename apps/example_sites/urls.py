@@ -17,5 +17,5 @@ urlpatterns = [
     path("PaymentPlan", payment_plan, name="payment_plan"),
     path("PhotographyPortfolio", photography_portfolio, name="photography_portfolio"),
     path("AnimalHelp", animal_help, name="animal_help"),
-    path("AnimalHelp", fees, name="fees"),
+    path("Fees", fees, name="fees"),
 ]
