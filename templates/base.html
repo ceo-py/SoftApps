@@ -8,7 +8,9 @@
         <meta name="viewport" content="width=\, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="{% sass_src 'styles/scss/menu.scss' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'styles/css/styles.css' %}">
-        <title>Soft Apps</title>
+        {% block stylesheets %}
+        {% endblock %}
+        <title>{% block title %}Soft Apps{% endblock %}</title>
     </head>
     <nav>
         {% if index %}
@@ -69,11 +71,11 @@
             </div>
         </div>
 
-        <div class="overlay{% if menu_open %} active{% endif %}" style="margin-top: 150px;">
-            {% block content %}
-            {% endblock %}
-        </div>
     </nav>
+    <div class="overlay{% if menu_open %} active{% endif %}" style="margin-top: 150px;">
+        {% block content %}
+        {% endblock %}
+    </div>
     <footer>
         <p>@Soft Apps - 2023. All rights reserved.</p>
     </footer>
@@ -93,4 +95,6 @@
         });
     });
 </script>
+{% block script %}
+{% endblock %}
 

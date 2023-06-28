@@ -1,20 +1,17 @@
 {% extends 'base.html' %}
-{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sprint Planning</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'styles/print_planning/styles/reset.css' %}">
-        <link rel="stylesheet" href="{% static 'styles/print_planning/styles/form.css' %}">
-        <link rel="stylesheet" href="{% static 'styles/print_planning/styles/tasks.css' %}">
-    </head>
+{% load static %}
+
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/print_planning/styles/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/print_planning/styles/form.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/print_planning/styles/tasks.css' %}">
+{% endblock %}
+{% block title %}Sprint Planning{% endblock %}
+
+{% block content %}
     <body>
         <main>
             <section id="form-section">
@@ -62,11 +59,12 @@
                 </p>
             </section>
         </main>
-        <script src="{% static 'styles/print_planning/app.js' %}"></script>
     </body>
-</html>
-{% endblock %}
 
+{% endblock %}
+{% block script %}
+    <script src="{% static 'styles/print_planning/app.js' %}"></script>
+{% endblock %}
 
 
 

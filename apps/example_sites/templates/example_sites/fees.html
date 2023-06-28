@@ -1,31 +1,27 @@
 {% extends 'base.html' %}
-{% block content %}
-    {% load static %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Document</title>
-        <link rel="stylesheet" href="{% static 'styles/fees/reset.css' %}"/>
-        <link rel="stylesheet" href="{% static 'styles/fees/style.css' %}"/>
-    </head>
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'styles/fees/reset.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/fees/style.css' %}"/>
+{% endblock %}
+{% block title %}Document{% endblock %}
+
+{% block content %}
+    <header>
+        <section class="logo">
+            <img class="logo__img" src="{% static 'styles/fees/images/creative-logo.svg' %}" alt=""/>
+        </section>
+        <section class="nav">
+            <ul class="items">
+                <li class="item"><a href="" class="link">ЗА НАС </a></li>
+                <li class="item"><a href="" class="link">ФОРУМ</a></li>
+                <li class="item"><a href="" class="link">БЛОГ</a></li>
+                <li class="item"><a href="" class="link">КОНТАКТИ </a></li>
+            </ul>
+        </section>
+    </header>
     <body>
-        <header>
-            <section class="logo">
-                <img class="logo__img" src="{% static 'styles/fees/images/creative-logo.svg' %}" alt=""/>
-            </section>
-            <section class="nav">
-                <ul class="items">
-                    <li class="item"><a href="" class="link">ЗА НАС </a></li>
-                    <li class="item"><a href="" class="link">ФОРУМ</a></li>
-                    <li class="item"><a href="" class="link">БЛОГ</a></li>
-                    <li class="item"><a href="" class="link">КОНТАКТИ </a></li>
-                </ul>
-            </section>
-        </header>
         <main>
             <section class="hero">
                 <img class="hero__img" src="{% static 'styles/fees/images/calculator-icon.svg' %}" alt=""/>
@@ -163,5 +159,4 @@
             <p>© 2017-2020 SoftUni Creative. All Rights Reserved.</p>
         </footer>
     </body>
-</html>
 {% endblock %}
