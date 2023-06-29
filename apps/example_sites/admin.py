@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from apps.example_sites.models import *
+from apps.video_lessons.models import *
 
 # Register your models here.
 
@@ -14,6 +15,15 @@ admin.site.register((
     OtherProjectsModel,
     SuggestionsModel,
     BooksModel,
-    WebSitesModel
-
+    WebSitesModel,
+    BasicVideoLessonsModel,
+    FundamentalsMidVideoLessonsModel,
+    FundamentalsFinalVideoLessonsModel,
+    MultidimensionalListsModel,
+    FunctionsAdvancedModel,
+    AdvancedVideoLessonsModel,
+    OOPVideoLessonsModel,
+    JSDOMEventsModel,
+    JSFrontENdVideoLessonsModel,
+    PythonWebVideoLessonsModel
 ))
