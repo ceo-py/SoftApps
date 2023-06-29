@@ -22,4 +22,5 @@ urlpatterns = [
     path("", include("apps.common.urls")),
     path("BaiscModule/", include("apps.basic.urls")),
     path("ExampleSites/", include("apps.example_sites.urls")),
+    path("DiscordBot/", include("apps.discord_bot.urls")),
 ]
