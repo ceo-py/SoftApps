@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("video_lessons", "0002_fundamentalsmidvideolessonsmodel"),
     ]

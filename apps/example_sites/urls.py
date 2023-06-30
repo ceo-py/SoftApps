@@ -1,8 +1,6 @@
 from django.urls import path
 
-from apps.example_sites.views import example_sites, post_task, sprint_planning, scary_story, music_site, \
-    hotel_reservation, ski_lift, travel_agency, service, payment_plan, photography_portfolio, animal_help, \
-    fees
+from apps.example_sites.views import *
 
 urlpatterns = [
     path("", example_sites, name="example_sites"),

@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class BaseModel(models.Model):
     title = models.CharField()
     video_url = models.CharField()
