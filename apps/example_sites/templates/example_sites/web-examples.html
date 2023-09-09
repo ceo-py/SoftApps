@@ -30,7 +30,9 @@
                             {% for item in web_items %}
                                 <div class="col-md-6">
                                     <div class="cn-img">
-                                        <img src="{{ item.image_url }}" alt="web pic"/>
+                                        <a href="{{ item.site_url }}" target="_blank">
+                                            <img src="{{ item.image_url }}" alt="web pic"/>
+                                        </a>
                                         <div class="cn-title">
                                             <a href="{{ item.site_url }}" target="_blank">{{ item.title }}</a>
                                             <a class="item-end" href="{{ item.code_link }}" target="_blank">
@@ -48,7 +50,9 @@
                             {% for item in js_front_end %}
                                 <div class="col-md-6">
                                     <div class="cn-img">
-                                        <img src="{{ item.image_url }}" alt="js front end pic"/>
+                                        <a href="{{ item.site_url }}">
+                                            <img src="{{ item.image_url }}" alt="js front end pic"/>
+                                        </a>
                                         <div class="cn-title">
                                             <a href="{{ item.site_url }}">{{ item.title }}</a>
                                             <a class="item-end" href="{{ item.code_link }}" target="_blank">
@@ -75,7 +79,9 @@
                             {% for item in js_advanced %}
                                 <div class="col-md-6">
                                     <div class="cn-img">
-                                        <img src="{{ item.image_url }}" alt="js advanced pic"/>
+                                        <a href="{{ item.site_url }}">
+                                            <img src="{{ item.image_url }}" alt="js advanced pic"/>
+                                        </a>
                                         <div class="cn-title">
                                             <a href="{{ item.site_url }}">{{ item.title }}</a>
                                             <a class="item-end" href="{{ item.code_link }}" target="_blank">
@@ -93,7 +99,9 @@
                             {% for item in html_css %}
                                 <div class="col-md-6">
                                     <div class="cn-img">
-                                        <img src="{{ item.image_url }}" alt="html css pic"/>
+                                        <a href="{{ item.site_url }}">
+                                            <img src="{{ item.image_url }}" alt="html css pic"/>
+                                        </a>
                                         <div class="cn-title">
                                             <a href="{{ item.site_url }}">{{ item.title }}</a>
                                             <a class="item-end" href="{{ item.code_link }}" target="_blank">
@@ -131,9 +139,11 @@
                             <div id="featured" class="container tab-pane active">
                                 {% for item in games %}
                                     <div class="tn-news">
-                                        <div class="tn-img">
-                                            <img src="{{ item.image_url }}" alt="games pic"/>
-                                        </div>
+                                        <a href="{{ item.site_url }}" target="_blank">
+                                            <div class="tn-img">
+                                                <img src="{{ item.image_url }}" alt="games pic"/>
+                                            </div>
+                                        </a>
                                         <div class="tn-title">
                                             <a href="{{ item.site_url }}" target="_blank">{{ item.title }}</a><br>
                                             <a href="{{ item.code_link }}" target="_blank">
@@ -146,9 +156,11 @@
                             <div id="popular" class="container tab-pane fade">
                                 {% for item in discord_bots %}
                                     <div class="tn-news">
-                                        <div class="tn-img">
-                                            <img src="{{ item.image_url }}" alt="discord bot pic"/>
-                                        </div>
+                                        <a href="{{ item.code_link }}" target="_blank">
+                                            <div class="tn-img">
+                                                <img src="{{ item.image_url }}" alt="discord bot pic"/>
+                                            </div>
+                                        </a>
                                         <div class="tn-title">
                                             <a href="{{ item.site_url }}" target="_blank">{{ item.title }}</a><br>
                                             <a href="{{ item.code_link }}" target="_blank">
@@ -162,7 +174,9 @@
                                 {% for item in other_projects %}
                                     <div class="tn-news">
                                         <div class="tn-img">
-                                            <img src="{{ item.image_url }}" alt="other projects pic"/>
+                                            <a href="{{ item.code_link }}" target="_blank">
+                                                <img src="{{ item.image_url }}" alt="other projects pic"/>
+                                            </a>
                                         </div>
                                         <div class="tn-title">
                                             <a href="{{ item.code_link }}" target="_blank">{{ item.title }}</a>
@@ -191,7 +205,9 @@
                                 {% for item in suggestions %}
                                     <div class="tn-news">
                                         <div class="tn-img">
-                                            <img src="{{ item.image_url }}" alt="youtube pic"/>
+                                            <a href="{{ item.code_link }}" target="_blank">
+                                                <img src="{{ item.image_url }}" alt="youtube pic"/>
+                                            </a>
                                         </div>
                                         <div class="tn-title">
                                             <a href="{{ item.code_link }}" target="_blank"><i
@@ -205,7 +221,9 @@
                                 {% for item in books %}
                                     <div class="tn-news">
                                         <div class="tn-img">
-                                            <img src="{{ item.image_url }}" alt="book pic"/>
+                                            <a href="{{ item.code_link }}" target="_blank">
+                                                <img src="{{ item.image_url }}" alt="book pic"/>
+                                            </a>
                                         </div>
                                         <div class="tn-title">
                                             <a href="{{ item.code_link }}" target="_blank">{{ item.title }}</a>
@@ -217,7 +235,9 @@
                                 {% for item in web_sites %}
                                     <div class="tn-news">
                                         <div class="tn-img">
-                                            <img src="{{ item.image_url }}" alt="web site pic"/>
+                                            <a href="{{ item.code_link }}" target="_blank">
+                                                <img src="{{ item.image_url }}" alt="web site pic"/>
+                                            </a>
                                         </div>
                                         <div class="tn-title">
                                             <a href="{{ item.code_link }}" target="_blank">{{ item.title }}</a>
@@ -239,12 +259,12 @@
 
 {% endblock %}
 {% block script %}
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="{% static 'styles/example_sites/lib/easing/easing.min.js' %}"></script>
-<script src="{% static 'styles/example_sites/lib/slick/slick.min.js' %}"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'styles/example_sites/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'styles/example_sites/lib/slick/slick.min.js' %}"></script>
 
-<!-- Template Javascript -->
-<script src="{% static 'styles/example_sites/js/main.js' %}"></script>
+    <!-- Template Javascript -->
+    <script src="{% static 'styles/example_sites/js/main.js' %}"></script>
 {% endblock %}
