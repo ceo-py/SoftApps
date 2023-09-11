@@ -5,7 +5,7 @@ from django.db import models
 
 
 class BaseModel(models.Model):
-    command = models.CharField(max_length=10)
+    command = models.CharField(max_length=20)
     description = models.CharField(max_length=500)
     data_type = models.CharField(max_length=10)
     image_url = models.URLField()

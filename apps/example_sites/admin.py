@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+from apps.common.models import BaseModelIndex
 from apps.example_sites.models import *
 from apps.video_lessons.models import *
 
@@ -27,5 +28,7 @@ admin.site.register(
         JSDOMEventsModel,
         JSFrontENdVideoLessonsModel,
         PythonWebVideoLessonsModel,
+        BaseModelIndex,
+        ReactAppModel
     )
 )

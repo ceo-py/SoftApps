@@ -8,14 +8,12 @@
         <meta name="viewport" content="width=\, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="{% sass_src 'styles/scss/menu.scss' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'styles/css/styles.css' %}">
+        <link href="{% static 'styles/index/img/favicon.ico'  %}" rel="icon">
         {% block stylesheets %}
         {% endblock %}
         <title>{% block title %}Soft Apps{% endblock %}</title>
     </head>
     <nav>
-        {% if index %}
-            <h1>Welcome click the burger menu to see the magic.</h1>
-        {% endif %}
         <input type="checkbox" id="burger-toggle">
         <label for="burger-toggle" class="burger-menu">
             <div class="line"></div>
@@ -24,23 +22,23 @@
         </label>
         <div class="menu">
             <div class="menu-inner">
-                <ul class="menu-nav">
-                    <li class="menu-nav-item"><a class="menu-nav-link" href="{% url 'basic_module' %}"><span>
-            <div>Basics</div>
-          </span></a></li>
-                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div>Fundamentals</div>
-          </span></a></li>
-                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div>Advanced</div>
-          </span></a></li>
-                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div>JS Front End</div>
-          </span></a></li>
-                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div>Python Web</div>
-          </span></a></li>
-                </ul>
+{#                <ul class="menu-nav">#}
+{#                    <li class="menu-nav-item"><a class="menu-nav-link" href="{% url 'basic_module' %}"><span>#}
+{#            <div>Basics</div>#}
+{#          </span></a></li>#}
+{#                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>#}
+{#            <div>Fundamentals</div>#}
+{#          </span></a></li>#}
+{#                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>#}
+{#            <div>Advanced</div>#}
+{#          </span></a></li>#}
+{#                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>#}
+{#            <div>JS Front End</div>#}
+{#          </span></a></li>#}
+{#                    <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>#}
+{#            <div>Python Web</div>#}
+{#          </span></a></li>#}
+{#                </ul>#}
                 <div class="gallery">
                     <div class="title">
                         <p>Perks</p>
@@ -77,7 +75,7 @@
         {% endblock %}
     </div>
     <footer>
-        <p>@Soft Apps - 2023. All rights reserved.</p>
+        <p>@Soft Apps - 2023. All rights reserved.(Somewhere in near future may be?!)</p>
     </footer>
 
 </html>

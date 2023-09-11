@@ -53,3 +53,8 @@ class BooksModel(BaseModel):
 
 class WebSitesModel(BaseModel):
     pass
+
+
+class ReactAppModel(BaseModel):
+    pass
+

@@ -118,6 +118,33 @@
         </div>
         <!-- Category News End-->
 
+         <div class="cat-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>React Apps</h2>
+                        <div class="row cn-slider">
+                            {% for item in react_items %}
+                                <div class="col-md-6">
+                                    <div class="cn-img">
+                                        <a href="{{ item.site_url }}" target="_blank">
+                                            <img src="{{ item.image_url }}" alt="web pic"/>
+                                        </a>
+                                        <div class="cn-title">
+                                            <a href="{{ item.site_url }}" target="_blank">{{ item.title }}</a>
+                                            <a class="item-end" href="{{ item.code_link }}" target="_blank">
+                                                <i class="fab fa-github fa-flip-horizontal fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Tab News Start-->
         <div class="tab-news">
             <div class="container">

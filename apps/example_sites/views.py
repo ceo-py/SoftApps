@@ -22,6 +22,7 @@ def example_sites(request):
             "suggestions": get_all_items(SuggestionsModel),
             "books": get_all_items(BooksModel),
             "web_sites": get_all_items(WebSitesModel),
+            "react_items": get_all_items(ReactAppModel),
         },
     )
 
