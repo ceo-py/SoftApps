@@ -30,7 +30,7 @@
             <figure class="effect-oscar  wowload fadeIn">
                 <img src="{% static 'styles/video_lessons/images/py_basics.jpg' %}" alt="PY BASIC"/>
                 <figcaption>
-                    <p>Exam Preparations:<br>
+                    <p style="max-height: 100%; overflow-y: auto;">Exam Preparations:<br>
                         {% for item in basic_exam_prep %}
                             <a href="{{ item.video_url }}" target="_blank">
                                 {{ item.title }}
@@ -42,7 +42,7 @@
             <figure class="effect-oscar  wowload fadeInUp">
                 <img src="{% static 'styles/video_lessons/images/py_fund.jpg' %}" alt="PY FUND MID"/>
                 <figcaption>
-                    <p>Exam Preparations:<br>
+                    <p style="max-height: 100%; overflow-y: auto;">Exam Preparations:<br>
                         {% for item in fundamentals_mid_exam_prep %}
                             <a href="{{ item.video_url }}" target="_blank">
                                 {{ item.title }}
